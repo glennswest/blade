@@ -61,6 +61,18 @@ module side_holes(){
    
 }
 
+module weight_reduction()
+{
+    for (y = [5 * inch : 12 : 9.5 * inch]){
+     for (i = [21 : .7 * inch : platesize - 50]){
+         translate([i, y, -1]) cylinder(r=3, h=holedepth);
+    }
+   }
+   
+
+}
+
+
 module holes(){
     /* Row 1 from back */ 
     translate([1.350 * inch,            boardsize - .400 * inch, -1]) cylinder(r=holesize,h=holedepth);
@@ -74,6 +86,7 @@ module holes(){
     /* Row 3 */
     translate([1.350 * inch + 1.8 * inch, boardsize - 9.35 * inch, -1]) cylinder(r=holesize,h=holedepth);
     translate([1.350 * inch + 8   * inch, boardsize - 9.35 * inch, -1]) cylinder(r=holesize,h=holedepth);
+    
 }
 
 module mount_plate(){
@@ -82,10 +95,11 @@ module mount_plate(){
         side_holes();
         //translate([12,25,0]) board();
         translate([12,25,0]) holes();
+        weight_reduction();
         
         }
    
 }
 
-mount_plate();
+ translate([0-platesize+20,0-platesize+20,0]) projection() mount_plate();
 //inverse_gearmount(thickness);
