@@ -1,11 +1,12 @@
 
 
 inch = 25.4;
-holesize = (0.156 * inch) / 2;
+holesize = 2.5 / 2;
 platesize = 12 * inch;
 boardsize = 9.6 * inch;
 thickness = 3;
 holedepth = thickness + 2;
+$fn = 128;
 
 module inverse_gearmount(th)
 {  
