@@ -1,0 +1,6 @@
+G28 X Y Z
+G92 X Y Z
+G00 X5.9 Y10.30 Z45
+G92 X Y Z
+
+

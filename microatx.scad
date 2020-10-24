@@ -2,7 +2,7 @@
 
 inch = 25.4;
 holesize = 2.5 / 2;
-platesize = 11.8 * inch;
+platesize = 11.7 * inch;
 boardsize = 9.6 * inch;
 thickness = 3;
 holedepth = thickness + 2;
