@@ -2,7 +2,7 @@
 
 inch = 25.4;
 holesize = 2.5 / 2;
-platesize = 11.7 * inch;
+platesize = 11.4 * inch;
 boardsize = 9.6 * inch;
 thickness = 3;
 holedepth = thickness + 2;
@@ -57,7 +57,7 @@ module side_holes(){
          translate([i, -10+20, -1]) cylinder(r=holesize, h=holedepth);
     }
       for (i = [10 : 1 * inch : platesize + 10]){
-         translate([i, platesize-30, -1]) cylinder(r=holesize, h=holedepth);
+        translate([i, platesize-24.5, -1]) cylinder(r=holesize, h=holedepth);
     }
    
 }
