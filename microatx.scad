@@ -6,7 +6,7 @@ platesize = 12 * inch;
 boardsize = 9.6 * inch;
 thickness = 3;
 holedepth = thickness + 2;
-$fn = 128;
+$fn = 64;
 
 module inverse_gearmount(th)
 {  
@@ -96,7 +96,7 @@ module mount_plate(){
         side_holes();
         //translate([12,25,0]) board();
         translate([12,25,0]) holes();
-        weight_reduction();
+        //weight_reduction();
         
         }
    
